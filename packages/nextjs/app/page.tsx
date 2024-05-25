@@ -36,7 +36,7 @@ const Home: NextPage = () => {
           </h1>
 
           <h1 className="text-center text-5xl font-madimi mb-7 flex justify-center items-center">
-            No Loss Project Funding{' '}
+            No Loss Campaign Funding{' '}
             <br className="lg:hidden" />
             <span className="text-purple-600">  + Prizes!</span>
           </h1>

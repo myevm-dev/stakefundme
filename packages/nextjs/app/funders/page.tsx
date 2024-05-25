@@ -22,7 +22,7 @@ const Funders: NextPage = () => {
         <h3 className="text-7xl text-center font-madimi text-purple-600">Funders</h3>
 
         <p className="text-center text-2xl mt-10 mb-14">
-          Check out all the funders who have contributed to public goods campaigns on FundGuys
+          Check out all the funders who have contributed to public goods campaigns on Stake Fund Me
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
