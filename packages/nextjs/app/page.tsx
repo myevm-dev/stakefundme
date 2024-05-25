@@ -32,13 +32,17 @@ const Home: NextPage = () => {
       <div className="px-5 sm:px-7 md:px-20 my-10">
         <div>
           <h1 className="text-center text-6xl font-madimi mb-7 flex justify-center items-center">
-            <span className="mr-1">🍄</span>
-            <span className="text-7xl">FundGuys</span>
+
           </h1>
 
-          <p className="text-center text-2xl mb-7">
-            A public goods funding platform on Base that rewards funders with Mycologuys NFTs
-          </p>
+          <h1 className="text-center text-5xl font-madimi mb-7 flex justify-center items-center">
+            No Loss Project Funding{' '}
+            <br className="lg:hidden" />
+            <span className="text-purple-600">  + Prizes!</span>
+          </h1>
+          <div className="text-center">
+            <Image src="/poweredby.png" alt="poweredby" className="mx-auto" width={300} height={100} />
+          </div>
         </div>
 
         <div className="mb-10">

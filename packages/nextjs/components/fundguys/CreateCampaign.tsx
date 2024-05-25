@@ -7,6 +7,7 @@ import { Select, TextField } from "~~/components/fundguys/";
 import { useScaffoldContractWrite } from "~~/hooks/scaffold-eth";
 
 const preferredTokenOptions = [
+  { value: "0xd652C5425aea2Afd5fb142e120FeCf79e18fafc3", label: "POOL" },
   { value: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913", label: "USDC" },
   { value: "0x50c5725949A6F0c72E6C4a641F24049A917DB0Cb", label: "DAI" },
   { value: "0x4200000000000000000000000000000000000006", label: "WETH" },
@@ -91,7 +92,7 @@ const CreateCampaignModal = () => {
             id="name"
             label="Name"
             type="text"
-            placeholder="DeFi Do-Gooders"
+            placeholder="Stake4me"
             register={register}
             validations={{ required: "Please provide your name" }}
             errors={errors.name}

@@ -38,7 +38,7 @@ const Profile: NextPage = () => {
       <div className="px-5 sm:px-7 md:px-20 my-10">
         <div>
           <div className="flex justify-center items-center">
-            <h3 className="text-7xl text-center font-madimi">Your Profile</h3>
+            <h3 className="text-7xl text-center font-madimi text-purple-600">Your Profile</h3>
           </div>
 
           <div className="text-center text-2xl mt-10 mb-14">

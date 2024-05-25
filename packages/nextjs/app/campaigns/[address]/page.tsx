@@ -39,7 +39,7 @@ export default function CampaignDetailsPage({ params }: { params: { address: str
       <div className="px-5 sm:px-7 md:px-20 my-10">
         <div className="flex justify-center">
           <div className="">
-            <h3 className="text-7xl text-center font-madimi mb-10">Campaign Details</h3>
+            <h3 className="text-7xl text-center font-madimi mb-10 text-purple-600">Campaign Details</h3>
 
             <div>
               <img src={image} alt={title} className="w-full h-96 overflow-hidden object-cover rounded-lg mb-10" />
@@ -48,7 +48,7 @@ export default function CampaignDetailsPage({ params }: { params: { address: str
               <button onClick={handleShare} className="btn btn-primary w-full font-cubano font-normal text-xl">
                 Share
               </button>
-              <button className="btn-accent btn w-full font-cubano font-normal text-xl">Donate</button>
+              <button className="btn-accent btn w-full font-cubano font-normal text-xl">Stake</button>
             </div>
             <div className="overflow-x-auto border border-primary rounded-lg">
               <table className="table ">

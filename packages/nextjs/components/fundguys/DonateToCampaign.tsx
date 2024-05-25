@@ -6,6 +6,11 @@ import { TokenSymbol } from "~~/components/fundguys/";
 
 const SUPPORTED_TOKENS = [
   {
+    symbol: "POOL",
+    address: "0xd652C5425aea2Afd5fb142e120FeCf79e18fafc3",
+    decimals: 18,
+  },
+  {
     symbol: "USDC",
     address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
     decimals: 6,
@@ -50,7 +55,7 @@ export const DonateToCampaign = ({ projectTokenAddress, projectAddress, projectN
               }
             }}
           >
-            Donate
+            Stake
           </button>
           <DonateModal
             projectName={projectName}
@@ -166,7 +171,7 @@ const DonateModal = ({
   return (
     <dialog id={projectAddress} className="modal">
       <div className="modal-box bg-base-200 p-8 w-full">
-        <h3 className="font-bold text-4xl text-center mb-7">Donate</h3>
+        <h3 className="font-bold text-4xl text-center mb-7">Stake</h3>
         <div className="text-xl px-2 mb-5">
           <div className="flex justify-between mb-3">
             <div>Project Name</div>

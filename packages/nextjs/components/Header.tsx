@@ -114,7 +114,7 @@ export const Header = () => {
         </div>
         <Link href="/" passHref className="hidden lg:flex items-center gap-2 ml-4 mr-6 shrink-0">
           <div className="flex flex-col">
-            <span className="font-madimi leading-tight text-3xl">🍄 FundGuys</span>
+            <span className="font-madimi text-purple-600 leading-tight text-3xl">Stake Fund Me</span>
             {/* <span className="text-xs">Public Goods Funding</span> */}
           </div>
         </Link>
