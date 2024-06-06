@@ -12,7 +12,7 @@ const imageUrl = `${baseUrl}/thumbnail.jpg`;
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: "Stake Fund Me",
+    default: "MyEVM Start",
     template: "%s | Scaffold-ETH 2",
   },
   description: "No loss campaign funding with prizes",
