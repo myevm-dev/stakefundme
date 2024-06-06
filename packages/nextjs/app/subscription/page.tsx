@@ -15,7 +15,7 @@ const Subscription: NextPage = () => {
   return (
     <>
       <div className="px-5 sm:px-7 md:px-20 my-10">
-        <h3 className="text-7xl text-center font-madimi text-blue-600">Subscription Stake</h3>
+        <h3 className="text-7xl text-center font-montserrat-classic text-blue-600">Subscription Stake</h3>
         <p className="text-center text-2xl my-10">
           Browse all active campaigns to find a cause you want to support or <CreateCampaign />
         </p>
