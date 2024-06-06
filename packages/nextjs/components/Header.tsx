@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useCallback, useRef, useState } from "react";
-// import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useAccount } from "wagmi";
@@ -113,10 +113,7 @@ export const Header = () => {
           )}
         </div>
         <Link href="/" passHref className="hidden lg:flex items-center gap-2 ml-4 mr-6 shrink-0">
-          <div className="flex flex-col">
-            <span className="font-madimi text-purple-600 leading-tight text-3xl">Stake Fund Me</span>
-            {/* <span className="text-xs">Public Goods Funding</span> */}
-          </div>
+          <Image src="/starttextlogo.png" alt="MyEVM Start Logo" width={200} height={50} />
         </Link>
         <ul className="hidden lg:flex lg:flex-nowrap menu menu-horizontal px-1 gap-2">
           <HeaderMenuLinks />

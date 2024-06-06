@@ -4,7 +4,13 @@ import { erc20ABI, useAccount, useContractRead, useContractWrite } from "wagmi";
 import ProjectABI from "~~/app/campaigns/ProjectABI.json";
 import { TokenSymbol } from "~~/components/fundguys/";
 
-const SUPPORTED_TOKENS = [
+interface Token {
+  symbol: string;
+  address: string;
+  decimals: number;
+}
+
+const SUPPORTED_TOKENS: Token[] = [
   {
     symbol: "POOL",
     address: "0xd652C5425aea2Afd5fb142e120FeCf79e18fafc3",
@@ -27,12 +33,18 @@ const SUPPORTED_TOKENS = [
   },
 ];
 
-const tokensByAddress = SUPPORTED_TOKENS.reduce((tokenMap, token) => ({ ...tokenMap, [token.address]: token }), {});
+const tokensByAddress: { [address: string]: Token } = SUPPORTED_TOKENS.reduce((tokenMap, token) => ({ ...tokenMap, [token.address]: token }), {});
 
 interface IDonateToCampaign {
   projectName: string;
   projectTokenAddress: string;
   projectAddress: string;
+}
+
+interface Quote {
+  allowanceTarget: string;
+  to: string;
+  data: string;
 }
 
 export const DonateToCampaign = ({ projectTokenAddress, projectAddress, projectName }: IDonateToCampaign) => {
@@ -82,7 +94,7 @@ const DonateModal = ({
   const [donationApproved, setDonationApproved] = useState(false);
   const [tokenToDonate, setTokenToDonate] = useState(projectTokenAddress);
   const [amount, setAmount] = useState("0");
-  const [quote, setQuote] = useState();
+  const [quote, setQuote] = useState<Quote | null>(null);
   const [approveButtonText, setApproveButtonText] = useState("Approve");
 
   const parsedAmount = BigInt(parseUnits(amount, tokensByAddress[tokenToDonate]?.decimals));
@@ -102,11 +114,15 @@ const DonateModal = ({
     args: [projectAddress, parsedAmount],
   });
 
-  /**
-   * Kinda works if the token being donated is different from the project's desired token
-   * But if the token being donated is the same as the project's desired token, the 0x api returns error
-   */
-  const args = [parsedAmount, tokenToDonate, projectTokenAddress, quote?.allowanceTarget, quote?.to, quote?.data];
+  const args = [
+    parsedAmount,
+    tokenToDonate,
+    projectTokenAddress,
+    quote?.allowanceTarget || "",
+    quote?.to || "",
+    quote?.data || ""
+  ];
+
   const { writeAsync: sendTokenDonation, isSuccess: donateIsSuccess } = useContractWrite({
     address: projectAddress,
     abi: ProjectABI,
@@ -114,7 +130,7 @@ const DonateModal = ({
     args,
   });
 
-  const { writeAsync: donateSameToken} = useContractWrite({
+  const { writeAsync: donateSameToken } = useContractWrite({
     address: projectAddress,
     abi: ProjectABI,
     functionName: "donateSameToken",
@@ -164,8 +180,8 @@ const DonateModal = ({
     if (projectTokenAddress === tokenToDonate) {
       await donateSameToken();
     } else {
-    await sendTokenDonation();
-  }
+      await sendTokenDonation();
+    }
   };
 
   return (

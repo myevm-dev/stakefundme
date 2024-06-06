@@ -31,22 +31,16 @@ const Home: NextPage = () => {
     <>
       <div className="px-5 sm:px-7 md:px-20 my-10">
         <div>
-          <h1 className="text-center text-6xl font-madimi mb-7 flex justify-center items-center">
-
-          </h1>
-
-          <h1 className="text-center text-5xl font-madimi mb-7 flex justify-center items-center">
-            No Loss Campaign Funding{' '}
-            <br className="lg:hidden" />
-            <span className="text-purple-600">  + Prizes!</span>
-          </h1>
           <div className="text-center">
-            <Image src="/poweredby.png" alt="poweredby" className="mx-auto" width={300} height={100} />
+            <Image src="/poweredby.png" alt="poweredby" className="mx-auto" width={500} height={100} />
           </div>
+          <h1 className="text-center text-5xl font-madimi mb-5 flex flex-col justify-center items-center">
+            <span style={{ color: '#065FFF' }}>Capital Protected Project Funding</span>
+          </h1>
         </div>
 
         <div className="mb-10">
-          <h3 className="text-3xl mb-5 font-bold">Recent Campaigns</h3>
+          <h3 className="text-3xl mb-5 font-bold">LIVE NOW</h3>
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {isLoadingEvents || !events ? (
               <SkeletonLoader numberOfItems={3} />

@@ -19,10 +19,10 @@ const Funders: NextPage = () => {
   return (
     <>
       <div className="px-5 sm:px-7 md:px-20 my-10">
-        <h3 className="text-7xl text-center font-madimi text-purple-600">Funders</h3>
+        <h3 className="text-7xl text-center font-montserrat-classic text-blue-600">Funders</h3>
 
         <p className="text-center text-2xl mt-10 mb-14">
-          Check out all the funders who have contributed to public goods campaigns on Stake Fund Me
+          Check out all the funders
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
