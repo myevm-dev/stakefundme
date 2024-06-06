@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { parseUnits } from "viem";
 import { erc20ABI, useAccount, useContractRead, useContractWrite } from "wagmi";
-import ProjectABI from "~~/app/campaigns/ProjectABI.json";
+import ProjectABI from "~~/app/subscription/ProjectABI.json";
 import { TokenSymbol } from "~~/components/fundguys/";
 
 interface Token {

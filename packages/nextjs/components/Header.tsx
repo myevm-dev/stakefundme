@@ -18,13 +18,18 @@ type HeaderMenuLink = {
 
 export const menuLinks: HeaderMenuLink[] = [
   {
-    label: "Campaigns",
-    href: "/campaigns",
+    label: "Funders",
+    href: "/funders",
+    icon: <BanknotesIcon className="h-5 w-5" />,
+  },
+  {
+    label: "Subscription",
+    href: "/subscription",
     icon: <HeartIcon className="h-5 w-5" />,
   },
   {
-    label: "Funders",
-    href: "/funders",
+    label: "PutPad",
+    href: "/putpad",
     icon: <BanknotesIcon className="h-5 w-5" />,
   },
   // {

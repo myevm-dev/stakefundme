@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Address, formatUnits } from "viem";
 import { useContractRead, useContractWrite } from "wagmi";
-import ProjectABI from "~~/app/campaigns/ProjectABI.json";
+import ProjectABI from "~~/app/subscription/ProjectABI.json";
 import { DonateToCampaign, TokenSymbol } from "~~/components/fundguys/";
 
 interface ICampaignCard {
